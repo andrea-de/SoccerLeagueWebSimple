@@ -14,7 +14,7 @@ Simple first website utilizing HTML, CSS, and Javascript
 
 - Modern CSS Grid Layout
 - CSS Flexbox
-- Semi-Responsive design for varying  desktop window sizes
+- Responsive design for varying  desktop window sizes using media-queries
 - Advanced CSS Selectors including Pseudo-classes and Combinators 
 
 ## Javascript Skills implemented
