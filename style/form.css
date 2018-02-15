@@ -1,0 +1,22 @@
+h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+h4 {
+    font-weight: bold;
+    padding: 15px;
+    font-size: 1.2em;
+}
+form p {
+    margin: 10px 0 20px 0px;
+}
+
+.schoolsTable th {
+    font-weight: bold;
+}
+
+.schoolsTable td, .posTable td {
+    padding: 10px;
+}

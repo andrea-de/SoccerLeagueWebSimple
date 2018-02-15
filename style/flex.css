@@ -1,0 +1,14 @@
+.picContainer {
+    border-style: solid;
+    height: 500px;
+    width: 100%;
+    display: flex;
+}
+
+.picContainer img {
+    flex-basis: 20%;
+}
+
+.picContainer img {
+    opacity: 0.5;
+}

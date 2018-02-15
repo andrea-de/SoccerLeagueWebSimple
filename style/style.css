@@ -1,0 +1,54 @@
+.bold {
+    font-weight: bold; 
+}
+.center {
+    text-align: center;
+}
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+h4 {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+h5 {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.scheduleTable {
+    min-width: 600px;
+    table-layout:fixed;
+}
+
+.scheduleTable th, .schedule td {
+    text-align: left;
+}
+
+.scheduleTable th {
+    font-weight: bold;
+    text-decoration: underline;
+    padding-bottom: 5px;
+}
+
+.scheduleTable td:first-child {
+    padding-left: 3%;
+}
+
+.pageContainer table {
+    width: 90%;
+}
+
+.infoSection {
+    width: 90%;
+    margin: 5px 0px 20px 0px;
+}
+
+.locations td {
+    padding: 5px;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration</title>
+    <link rel="icon" href="pics/logo.png">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/topBarStyle.css">
+    <link rel="stylesheet" href="style/grid.css">
+    <link rel="stylesheet" href="style/form.css">
+    <script src="check.js"></script>
+</head>
+<body>    
+    <!-- Navigation Bar -->
+    <div class="topBar">
+        <!-- Left Part -->
+        <div class="leftBar">
+            <div class="logoDiv"><img class="navBarContent" src="pics/logo.png"></div>
+            <div class="homeLink"><a href="index.html">Home</a></div>
+        </div>
+        
+        <!-- Right Part -->
+        <div>
+            <ul class="linksBar">
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="gameInfo.html">Game Information</a></li>
+                <li><a href="about.html">About NYSL</a></li>
+                <li><a href="rules.html">Rules &amp; Policies</a></li>
+                <li><a href="join.html">Join Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Content -->
+    <div class="pageContainer">
+        <div class="leftCol">
+            <h2>Registration Form</h2>
+            <div class="formContainer">
+                <form id="myForm" action="show_data.html" onsubmit="return check();" onchange="return check();" method="get">
+                    <p>Player's First Name: <input type="text" name="firstName"></p>
+                    <p>Player's Last Name: <input type="text" name="lastName"></p>
+                    <p>Street Address: <input type="text" name="address"></p>
+                    <p>City: <input type="text" name="city"></p>
+                    <p>Zip Code: <input type="text" name="zip" onblur="checkZip();"></p>
+                    <p>Birth Date (mm/dd/yyyy): <input type="date" name="bdate" onblur="bDay();"></p>
+                    <p>Gender: 
+                        <input type="radio" name="gender" value="female"> Female 
+                        <input type="radio" name="gender" value="male"> Male
+                    </p>
+                    <p>Grade: 
+                        <input type="radio" name="grade" value="Pre School"> Pre-School 
+                        <input type="radio" name="grade" value="1"> 1<sup>st</sup>
+                        <input type="radio" name="grade" value="2"> 2<sup>nd</sup>
+                        <input type="radio" name="grade" value="3"> 3<sup>rd</sup>
+                        <input type="radio" name="grade" value="4"> 4<sup>th</sup>
+                        <input type="radio" name="grade" value="5"> 5<sup>th</sup>
+                    </p>
+                    <p>Parent/Guardian: <input type="text" name="parent"></p>
+                    <h4>Which elementary schools do you live near?</h4>
+                    <table class="schoolsTable">
+                        <tr>
+                            <th colspan="2">First Closest School:</th>
+                            
+                            <th colspan="2">Second Closest School:</th>
+                            
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="schoolNear" value="AJ Katzenmaier" onchange="uncheck2School()">AJ Katzenmaier</td>
+                            <td><input type="radio" name="schoolNear" value="Marjorie P Hart" onchange="uncheck2School()">Marjorie P Hart</td>
+                            <td><input type="radio" name="schoolLessNear" value="AJ Katzenmaier" onclick="checkS(this);">AJ Katzenmaier</td>
+                            <td><input type="radio" name="schoolLessNear" value="Marjorie P Hart" onclick="checkS(this);">Marjorie P Hart</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="schoolNear" value="Greenbay" onchange="uncheck2School()">Greenbay</td>
+                            <td><input type="radio" name="schoolNear" value="North Elementary" onchange="uncheck2School()">North Elementary</td>
+                            <td><input type="radio" name="schoolLessNear" value="Greenbay" onclick="checkS(this);">Greenbay</td>
+                            <td><input type="radio" name="schoolLessNear" value="North Elementary" onclick="checkS(this);">North Elementary</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="schoolNear" value="Howard A Yeager" onchange="uncheck2School()">Howard A Yeager</td>
+                            <td><input type="radio" name="schoolNear" value="South Elementary" onchange="uncheck2School()">South Elementary</td>
+                            <td><input type="radio" name="schoolLessNear" value="Howard A Yeager" onclick="checkS(this);">Howard A Yeager</td>
+                            <td><input type="radio" name="schoolLessNear" value="South Elementary" onclick="checkS(this);">South Elementary</td>
+                        </tr>
+                    </table>
+                    <h4>What position(s) do you normally play? (check all that apply)</h4>
+                    <table class="posTable">
+                        <tr>
+                            <td><input type="checkbox" name="position" value="Forward">Forward</td>
+                            <td><input type="checkbox" name="Midfield" value="Midfield">Midfield</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="position" value="Defense">Defense</td>
+                            <td><input type="checkbox" name="Midfield" value="Goalkeeper">Goalkeeper</td>
+                        </tr>
+                    </table>
+                    <h4>What position(s) do you want to play? (check all that apply)</h4>
+                    <table class="posTable">
+                        <tr>
+                            <td><input type="checkbox" name="positionWant" value="Forward">Forward</td>
+                            <td><input type="checkbox" name="positionWant" value="Midfield">Midfield</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="positionWant" value="Defense">Defense</td>
+                            <td><input type="checkbox" name="positionWant" value="Goalkeeper">Goalkeeper</td>
+                        </tr>
+                    </table>
+                    <h4><input type="checkbox" name="hasUniform" value="True">Already Have a Uniform</h4>
+                    <input id="submit" type="submit" value="Submit" style="margin-bottom: 20px;" disabled="true">
+                </form>
+            </div>
+        </div>
+        <div class="rightCol">
+            <img src="pics/pic4.jpg">
+            <img src="pics/pic5.jpg">
+        </div>
+    </div>
+</body>
+</html>

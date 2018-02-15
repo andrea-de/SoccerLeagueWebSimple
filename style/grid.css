@@ -1,0 +1,72 @@
+.pageContainer {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10x;
+    width: 90vw;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    grid-template-areas:
+    "a b"
+}
+.leftCol {
+    width: 100%;
+    height: 85vh;
+    grid-area: a;
+    overflow-y: auto;
+}
+.rightCol {
+    margin: auto;
+    text-align: center;
+    height: 85vh;
+    grid-area: b;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* For IE */
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+    .pageContainer {
+         display: -ms-grid;
+        -ms-grid-columns: 3fr 1fr;
+        -ms-grid-rows: 1fr;
+    }
+    .leftCol {
+        -ms-grid-column: 1;
+    }
+    .rightCol {
+        -ms-grid-column: 2;
+    }
+}
+/* For Edge */
+@supports (display: -ms-grid) {
+    .pageContainer {
+         display: -ms-grid;
+        -ms-grid-columns: 3fr 1fr;
+        -ms-grid-rows: 1fr;
+    }
+    .leftCol {
+        -ms-grid-column: 1;
+    }
+    .rightCol {
+        -ms-grid-column: 2;
+    }
+}
+
+.rightCol img {
+    max-width: 100%;
+    max-width: 280px;
+    padding: 20px;
+}
+
+@media (max-height: 850px) {
+    .rightCol img:nth-child(2){
+        display: none;
+    }
+}
+
+

@@ -1,0 +1,43 @@
+.pageContainer h2 {
+    font-size: 2em;
+    padding: 0 0 5px 0;
+}
+.pageContainer h4 {
+    font-size: 1.1em;
+    padding: 0 0 5px 0;
+}
+.pageContainer h3 {
+    font-size: 1.2;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.pageContainer ul {
+    list-style-type: square;
+    margin-left: 5%;
+}
+.pageContainer ol {
+    list-style-type: decimal;
+    font-weight: bold;
+    margin-left: 5%;
+}
+.pageContainer ol ol {
+    list-style-type: lower-alpha;
+    font-weight: normal;
+}
+.pageContainer ul ol {
+    list-style-type: decimal;
+    font-weight: normal;
+}
+.pageContainer ul ul {
+    list-style-type: circle;
+}
+.pageContainer .bold {
+    font-weight: bold;
+}
+
+.pageContainer .normal {
+    font-weight: normal;
+}
+.pageContainer li {
+    padding: 5px 0 5px 0;
+}

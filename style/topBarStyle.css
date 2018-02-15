@@ -1,0 +1,52 @@
+.topBar {
+    margin: auto;
+    width: auto;
+    height: 50px;
+    background: lightgreen;
+    /* FlexBox */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+}
+
+.leftBar {
+    border-style: none;
+    /* FlexBox */
+    display: flex;
+    flex-direction: row;
+    flex:0;
+}
+.leftBar div {
+    flex: 0;
+}
+
+.topBar .leftBar div {
+    height: 50px;
+}
+.topBar .leftBar div img {
+    padding: 2px 2px 2px 2px;
+    height: 100%;
+    box-sizing: border-box;
+}
+.linksBar {
+    border-style: none;
+    vertical-align: middle; 
+    list-style: none;
+    /* FlexBox */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.homeLink a, .linksBar a {
+    border-style: dashed;
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: white;
+}
+
+.linksBar a:hover, .homeLink a:hover {
+  background: green ;
+}
